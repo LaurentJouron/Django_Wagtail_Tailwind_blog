@@ -1,62 +1,86 @@
-#### Video Tutorial for this project
-https://youtu.be/SQ4A7Q6_md8
-<br><br>
+<h1 align="center">Welcome on the readme Django Tailwind starter 👋</h1>
+<p align="center">
+  <a href="https://twitter.com/LaurentJouron">
+    <img alt="Twitter: LaurentJouron" 
+      src="https://img.shields.io/twitter/follow/LaurentJouron.svg?style=social" target="_blank" />
+  </a>
+  <a href="https://github.com/LaurentJouron">
+    <img alt="GitHub followers" 
+      src="https://img.shields.io/github/followers/LaurentJouron?style=social" />
+  </a>
+</p>
 
-#### Getting the files
-Download zip file<br> 
-or <br>
-git clone command (need git to be installed) and remove git folder afterwards
-```
-git clone https://github.com/andyjud/django-starter.git . && rm -rf .git
-```
-<br><br><br>
+___________
 
-## Setup
+<h1 align="center">Getting the files</h1>
 
-#### - Create Virtual Environment
-###### # Mac
+* Download zip file 
+or
+* git clone command (need git to be installed) and remove git folder afterwards
 ```
-python3 -m venv venv
-source venv/bin/activate
-```
-
-###### # Windows
-```
-python3 -m venv venv
-.\venv\Scripts\activate.bat
+git clone https://github.com/LaurentJouron/Django_Tailwind_starter.git . && rm -rf .git
 ```
 
-<br>
+<h1 align="center">Setup</h1>
 
-#### - Install dependencies
+* Create Virtual Environment
+
 ```
-pip install --upgrade pip
-pip install -r requirements.txt
+mkdir .venv
+```
+```
+pipenv install
+```
+```
+pipenv shell
 ```
 
-<br>
+<h1 align="center">Build container project with Docker</h1>
 
-#### - Migrate to database
+```
+docker compose up -d
+```
+
+<h1 align="center">Migrate to database</h1>
+
 ```
 python manage.py migrate
+```
+```
 python manage.py createsuperuser
 ```
 
-<br>
+<h1 align="center">Run frontend</h1>
 
-#### - Run application
+```
+cd frontend
+```
+* for watch
+```
+npm run tailwind-watch
+```
+* for minify build
+```
+npm run tailwind-build
+```
+
+<h1 align="center">Run application</h1>
+
 ```
 python manage.py runserver
 ```
 
-<br>
+<h1 align="center">Generate Secret Key (! Important for deployment !)</h1>
 
-#### - Generate Secret Key ( ! Important for deployment ! )
 ```
 python manage.py shell
+```
+```
 from django.core.management.utils import get_random_secret_key
+```
+```
 print(get_random_secret_key())
+```
+```
 exit()
 ```
-
-
