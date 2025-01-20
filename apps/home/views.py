@@ -1,13 +1,6 @@
-from django.views.generic import TemplateView
+from django.shortcuts import render
 
 
-class HomeIndexView(TemplateView):
+def home_index_view(request):
     template_name = "home/index.html"
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        title = "Django home index"
-        context = {
-            "title": title,
-        }
-        return context
+    return render(request, template_name=template_name)

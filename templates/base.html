@@ -35,12 +35,10 @@
     <meta name="keywords" content="{% block meta_keywords %}{% endblock meta_keywords %}">
     {% endblock seo_meta %}
 
-    <title>Django realtime chat</title>
+    <title>Django starter</title>
     <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <script src="https://unpkg.com/htmx.org@2.0.2"></script>
-    <script src="https://unpkg.com/htmx.org/dist/ext/ws.js"></script>
-    <script src="https://unpkg.com/hyperscript.org@0.9.13"></script>
     {% django_htmx_script %}
     <script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
     <link href="{% static 'css/output.css' %}" rel="stylesheet">
@@ -54,7 +52,7 @@
 
     {% block layout %}{% endblock %}
 
-    {% block javascript %}{% endblock javascript %}
+    {% block javascript %}{% endblock %}
 
 </body>
 </html>
