@@ -12,6 +12,8 @@ django-htmx = "*"
 django-environ = "*"
 psycopg2-binary = "*"
 django-browser-reload = "*"
+channels = {extras = ["daphne"], version = "*"}
+shortuuid = "*"
 
 [dev-packages]
 

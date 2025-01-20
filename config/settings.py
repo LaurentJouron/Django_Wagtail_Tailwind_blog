@@ -24,6 +24,7 @@ CSRF_TRUSTED_ORIGINS = ["https://*"]
 
 # Application definition
 INSTALLED_APPS = [
+    "daphne",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     # My apps
     "apps.home.apps.HomeConfig",
     "apps.users.apps.UsersConfig",
+    "apps.chat.apps.ChatConfig",
 ]
 
 SITE_ID = 1
@@ -79,8 +81,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "config.wsgi.application"
-
+# WSGI_APPLICATION = "config.wsgi.application"
+ASGI_APPLICATION = "config.asgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
