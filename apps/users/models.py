@@ -14,9 +14,7 @@ class Profile(models.Model):
 
     @property
     def name(self):
-        if self.displayname:
-            return self.displayname
-        return self.user.username
+        return self.displayname or self.user.username
 
     @property
     def avatar(self):

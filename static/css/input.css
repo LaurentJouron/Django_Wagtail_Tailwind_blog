@@ -42,11 +42,12 @@ p {
     @apply !bg-gray-300 hover:!bg-[#c3c9d0]
 }
 .navitems>li>a {
-    @apply flex items-center gap-2 h-12 px-4 hover:bg-[rgba(31,41,55,0.3)] rounded-lg;
+    @apply flex items-center gap-2 h-12 px-4 hover:underline hover:bg-hover_navbar rounded-lg transition-all duration-200 ease-in-out hover:scale-105;
 }
 .hoverlist>* {
-    @apply hover:bg-gray-100 rounded-md transition duration-150;
+    @apply hover:bg-hover_navbar hover:underline rounded-md transition-all duration-200 ease-in-out hover:scale-105;
 }
+
 .hoverlist>*>a {
     @apply flex items-center p-2;
 }

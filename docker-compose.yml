@@ -1,9 +1,9 @@
 services:
   postgres:
     image: postgres:latest
-    container_name: postgres_container
+    container_name: postgres_container_django_tailwind_starter
     ports:
-      - "15432:5432"
+      - "35432:5432"
     environment:
       POSTGRES_DB: postgres
       POSTGRES_USER: postgres
