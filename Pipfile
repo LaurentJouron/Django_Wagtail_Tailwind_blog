@@ -12,6 +12,7 @@ django-htmx = "*"
 django-environ = "*"
 psycopg2-binary = "*"
 django-browser-reload = "*"
+wagtail = "*"
 
 [dev-packages]
 

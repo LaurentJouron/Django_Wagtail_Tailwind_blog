@@ -36,9 +36,24 @@ INSTALLED_APPS = [
     "allauth.account",
     "django_htmx",
     "django_browser_reload",
+    # Wagtail
+    "wagtail.contrib.forms",
+    "wagtail.contrib.redirects",
+    "wagtail.embeds",
+    "wagtail.sites",
+    "wagtail.users",
+    "wagtail.snippets",
+    "wagtail.documents",
+    "wagtail.images",
+    "wagtail.search",
+    "wagtail.admin",
+    "wagtail",
+    "taggit",
+    "modelcluster",
     # My apps
     "apps.home.apps.HomeConfig",
     "apps.users.apps.UsersConfig",
+    "apps.blog.apps.BlogConfig",
 ]
 
 SITE_ID = 1
@@ -54,6 +69,7 @@ MIDDLEWARE = [
     "allauth.account.middleware.AccountMiddleware",
     "django_htmx.middleware.HtmxMiddleware",
     "django_browser_reload.middleware.BrowserReloadMiddleware",
+    "wagtail.contrib.redirects.middleware.RedirectMiddleware",
 ]
 
 AUTHENTICATION_BACKENDS = [
@@ -154,9 +170,12 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 LOGIN_REDIRECT_URL = "/"
 ACCOUNT_SIGNUP_REDIRECT_URL = (
-    "{% url 'account_signup' %}?next={% url 'profile-onboarding' %}"
+    "{% url 'account_signup' %}?next={% url 'users:profile-onboarding' %}"
 )
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 ACCOUNT_AUTHENTICATION_METHOD = env("ACCOUNT_AUTHENTICATION_METHOD")
 ACCOUNT_EMAIL_REQUIRED = env("ACCOUNT_EMAIL_REQUIRED")
+
+WAGTAIL_SITE_NAME = "Blog"
+WAGTAILADMIN_BASE_URL = "https://mywebsite.com"

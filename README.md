@@ -1,4 +1,4 @@
-<h1 align="center">Welcome on the readme Django Tailwind starter 👋</h1>
+<h1 align="center">Welcome on the readme Django Wagtail Tailwind blog 👋</h1>
 <p align="center">
   <a href="https://twitter.com/LaurentJouron">
     <img alt="Twitter: LaurentJouron" 
@@ -18,7 +18,7 @@ ___________
 or
 * git clone command (need git to be installed) and remove git folder afterwards
 ```
-git clone https://github.com/LaurentJouron/Django_Tailwind_starter.git . && rm -rf .git
+git clone https://github.com/LaurentJouron/Django_Wagtail_Tailwind_blog.git . && rm -rf .git
 ```
 
 <h1 align="center">Setup</h1>

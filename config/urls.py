@@ -10,6 +10,7 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path("", include("apps.home.urls", namespace="home")),
     path("profile/", include("apps.users.urls", namespace="users")),
+    path("blog/", include("apps.blog.urls")),
 ]
 
 # Only used when DEBUG=True, whitenoise can serve files when DEBUG=False
